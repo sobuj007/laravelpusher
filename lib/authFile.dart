@@ -76,7 +76,7 @@ class AuthFile {
       } catch (e) {
         print(e);
       }
-// print(chats);
+ print(chats);
       return chats;
     }
   }

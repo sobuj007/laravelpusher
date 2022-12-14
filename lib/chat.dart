@@ -99,8 +99,8 @@ class _ChatState extends State<Chat> {
                       itemBuilder: (BuildContext context, int index) {
                        
                         var participant={};
-                        //var lastmsg=;
-                        print(snapshot.data[index].lastmessage);
+                       // var lastmsg=json.decode(snapshot.data[index].lastMessage.toString());
+                    
                      
                         if(snapshot.data[index].participants[0].user.id==user.id){
                        
@@ -115,7 +115,7 @@ class _ChatState extends State<Chat> {
                         return ListTile(
                          leading: CircleAvatar(backgroundImage:NetworkImage(participant['img'])),
                           title: Text(participant['name'],style: TextStyle(color: Colors.black),),
-                          subtitle: Text(snapshot.data[index].id.toString())
+                          subtitle: Text(snapshot.data[index].lastMessage.message)
                         );
                       });
                  }
