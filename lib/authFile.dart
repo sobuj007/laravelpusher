@@ -65,13 +65,13 @@ class AuthFile {
             createdAt: DateTime.parse(i["created_at"]),
             updatedAt: DateTime.parse(i["updated_at"]),
             
-            lastMessage: i["last_message"].toString(),
+            lastMessage: LastMessage.fromJson(i["last_message"]),
             participants: List<Participant>.from(
                 i["participants"].map((x) => Participant.fromJson(x))),
           );
        
          chats.add(chat);
-        print(" from loop ${i["last_message"]}");
+        print(" from loop${i["last_message"]}");
         } 
       } catch (e) {
         print(e);

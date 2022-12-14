@@ -16,7 +16,7 @@ class Chats {
        this.isPrivate,
       this.createdAt,
   this.updatedAt,
-   this.lastMessage,
+  this. lastMessage,
       this.participants,
     });
 
@@ -26,7 +26,7 @@ class Chats {
     int? isPrivate;
     DateTime? createdAt;
     DateTime? updatedAt;
-    String? lastMessage;
+    LastMessage? lastMessage;
     List<Participant>? participants;
 
     factory Chats.fromJson(Map<String, dynamic> json) => Chats(
@@ -36,7 +36,7 @@ class Chats {
         isPrivate: json["is_private"],
         createdAt: DateTime.parse(json["created_at"]),
         updatedAt: DateTime.parse(json["updated_at"]),
-         lastMessage: json["last_message"],
+         lastMessage: LastMessage.fromJson(json["last_message"]),
         participants: List<Participant>.from(json["participants"].map((x) => Participant.fromJson(x))),
     );
 
@@ -47,7 +47,7 @@ class Chats {
         "is_private": isPrivate,
         "created_at": createdAt!.toIso8601String(),
         "updated_at": updatedAt!.toIso8601String(),
-        "last_message": lastMessage,
+        "last_message": lastMessage!.toJson(),
         "participants": List<dynamic>.from(participants!.map((x) => x.toJson())),
     };
 }
