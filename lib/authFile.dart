@@ -80,4 +80,44 @@ class AuthFile {
       return chats;
     }
   }
+  getSingelChat(id,page) async {
+    var token = await SharedPrefManager().getToken();
+    print(token);
+    var res = await http.get(
+      Uri.parse(Api.getSingelChat+"chat_id=$id&page=$page"),
+      headers: {'Accept': 'application/json', 'Authorization': 'Bearer $token'},
+    );
+
+  
+    var jrespons = json.decode(res.body);
+    print(jrespons);
+    if (!jrespons['error']) {
+    dynamic chats= [];
+
+      try {
+        // for (var i in jrespons['chats']) {
+        //   // Chats chat=Chats.fromJson(jrespons['chats']);
+        //   Chats chat = Chats(
+        //     id: i["id"],
+        //     createdBy: i["created_by"],
+        //     name: i["name"],
+        //     isPrivate: i["is_private"],
+        //     createdAt: DateTime.parse(i["created_at"]),
+        //     updatedAt: DateTime.parse(i["updated_at"]),
+            
+        //     lastMessage: LastMessage.fromJson(i["last_message"]),
+        //     participants: List<Participant>.from(
+        //         i["participants"].map((x) => Participant.fromJson(x))),
+        //   );
+       
+        //  chats.add(chat);
+        // print(" from loop${i["last_message"]}");
+        // } 
+      } catch (e) {
+        print(e);
+      }
+//  print(chats);
+      return chats;
+    }
+  }
 }

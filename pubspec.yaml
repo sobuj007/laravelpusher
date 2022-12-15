@@ -39,6 +39,8 @@ dependencies:
   quickalert: ^1.0.1
   animate_do: ^3.0.2
   shared_preferences: ^2.0.15
+  responsive_sizer:
+  onesignal_flutter: ^3.4.2
   
   laravel_echo:
     git:

@@ -6,15 +6,18 @@ import 'package:flutter/material.dart';
 
 import 'package:http/http.dart' as http;
 import 'package:lavalpuser/api.dart';
-import 'package:lavalpuser/fonts/fonts.dart';
+import 'package:lavalpuser/styles/colors.dart';
+import 'package:lavalpuser/styles/fonts.dart';
 import 'package:lavalpuser/model/userModel.dart';
 import 'package:lavalpuser/sharedpref/SharedPrefManager.dart';
 import 'package:quickalert/quickalert.dart';
 import 'package:quickalert/widgets/quickalert_dialog.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 import 'chat.dart';
 
 Fonts fonts= Fonts();
+//ColorsData col=ColorsData();
 void main() {
   runApp(const MyApp());
 }
@@ -25,9 +28,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return ResponsiveSizer(builder: (context,orientation,screenType){
+      return MaterialApp(
       home: Login(),
     );
+    });
   }
 }
 

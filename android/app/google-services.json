@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "437958238401",
+    "project_id": "successconnect-ba13e",
+    "storage_bucket": "successconnect-ba13e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437958238401:android:33977dfd736eb6556f7440",
+        "android_client_info": {
+          "package_name": "com.example.shikhinet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437958238401-o98aupfk0vvbh19maijn0k0e9n9rftpg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMsWrnhO1P-Jel4oyA5dcFfuUFgB06Pb0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437958238401-o98aupfk0vvbh19maijn0k0e9n9rftpg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
