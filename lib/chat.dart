@@ -147,7 +147,7 @@ class _ChatState extends State<Chat> {
                       ),
                               child: ListTile(
                                 onTap: (){
-                                  Navigator.push(context, CupertinoPageRoute(builder: (_)=>ChatRoom(participant:participant)));
+                                  Navigator.of(context).push(CupertinoPageRoute(builder: (_)=>ChatRoom(participant:participant)));
                                 },
                                leading: CircleAvatar(radius: 30,backgroundImage:NetworkImage(participant['img'])),
                                 title: Text(participant['name'],style: TextStyle(color: Colors.black),),

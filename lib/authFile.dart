@@ -72,7 +72,7 @@ class AuthFile {
           );
        
          chats.add(chat);
-        print(" from loop${i["last_message"]}");
+     
         } 
       } catch (e) {
         print(e);
@@ -81,7 +81,7 @@ class AuthFile {
       return chats;
     }
   }
-getSingelChatData(id,page) async {
+Future<dynamic> getSingelChatData(id,page) async {
     var token = await SharedPrefManager().getToken();
     print(token);
     var res = await http.get(

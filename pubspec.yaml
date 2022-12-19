@@ -41,6 +41,8 @@ dependencies:
   shared_preferences: ^2.0.15
   responsive_sizer:
   onesignal_flutter: ^3.4.2
+  auto_size_text_field: ^2.1.0
+  
   
   laravel_echo:
     git:
